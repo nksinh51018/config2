@@ -13,7 +13,7 @@ spring:
    properties:
       hibernate:
          dialect: org.hibernate.dialect.MySQL5Dialect
-databaseName: sql7350403
+databaseName: nguoidung
 eureka:
   client:
     serviceUrl:
