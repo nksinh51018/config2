@@ -7,9 +7,9 @@ spring:
          max-file-size: 200MB
          max-request-size: 215MB
    datasource:
-      url: jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7353871
-      username: sql7353871
-      password: RPXQh8TbFx
+      url: jdbc:mysql://localhost:3306/hinhanh
+      username: root
+      password: Akthangga1
    jpa:
       show-sql: true
       hibernate:
@@ -18,34 +18,20 @@ spring:
    properties:
       hibernate:
          dialect: org.hibernate.dialect.MySQL5Dialect
-
-         ##location: ${java.io.tmpdir}
-
-
-# file:
-#    upload-dir: ./src/main/resources/static/image/
    
 
-# server:
-#    port: 8082
+server:
+   port: 8082
 management:
    endpoints:
       web:
          exposure:
             include: hystrix.stream
-databaseName: sql7353871
+databaseName: hinhanh
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
-
----
-spring:
-  profiles: heroku
-eureka:
-  instance:
-    hostname: ${DOMAIN_NAME}
-    nonSecurePort: 80
+      defaultZone: http://localhost:8761/eureka/
 
    
 
