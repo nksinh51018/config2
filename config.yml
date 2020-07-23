@@ -1,0 +1,4 @@
+﻿server:
+     port: 8889
+my:
+     greeting: "hello nk test 4"
