@@ -1,5 +1,5 @@
-# server:
-#    port: 8084
+server:
+   port: 8084
 management:
    endpoints:
       web:
@@ -7,9 +7,9 @@ management:
             include: hystrix.stream
 spring:
    datasource:
-      url: jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7350403
-      username: sql7350403
-      password: GnftzE5AL1
+      url: jdbc:mysql://localhost:3306/nguoidung
+      username: root
+      password: Akthangga1
    jpa:
       show-sql: true
       hibernate:
@@ -22,16 +22,8 @@ spring:
 #    client:
 #       service-url:
 #          default-zone: http://localhost:8761/eureka/
-databaseName: sql7350403
+databaseName: nguoidung
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
-
----
-spring:
-  profiles: heroku
-eureka:
-  instance:
-    hostname: ${DOMAIN_NAME}
-    nonSecurePort: 80
+      defaultZone: http://localhost:8080/eureka/
