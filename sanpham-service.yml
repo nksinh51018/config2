@@ -31,4 +31,4 @@ databaseName: sanpham
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
+      defaultZone: http://localhost:8761/eureka/
